@@ -1,5 +1,6 @@
 <h2>Invite your friends</h2>
 <%= form_for(:invitation, url: invitations_path) do |f|%>
+
   <%= f.hidden_field :party_id, value: party.id %>
 
   <%= f.label :guest_email, value: "Guest email" %><br>

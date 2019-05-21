@@ -17,5 +17,13 @@
   <%= f.label :location %><br>
   <%= f.text_field :location%><br>
 
+  <%= fields_for :datetime do |datetime| %>
+    <%= datetime.label :date %>
+    <%= datetime.date_field :date %><br>
+
+    <%= datetime.label :time %>
+    <%= datetime.time_field :time %><br>
+  <%end%>
+
   <%= f.submit%>
 <%end%>

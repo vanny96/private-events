@@ -10,13 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_05_21_111621) do
+ActiveRecord::Schema.define(version: 2019_05_21_165038) do
 
   create_table "invitations", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "guest_id"
     t.integer "party_id"
+    t.index ["guest_id", "party_id"], name: "index_invitations_on_guest_id_and_party_id", unique: true
     t.index ["guest_id"], name: "index_invitations_on_guest_id"
     t.index ["party_id"], name: "index_invitations_on_party_id"
   end
@@ -28,6 +29,7 @@ ActiveRecord::Schema.define(version: 2019_05_21_111621) do
     t.integer "host_id"
     t.string "location"
     t.text "body"
+    t.datetime "date"
     t.index ["host_id"], name: "index_parties_on_host_id"
   end
 

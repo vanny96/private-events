@@ -1,0 +1,11 @@
+<%if @gone_parties %>
+  <h1>Old Parties</h1>
+  <%= link_to "New Events", root_path%>
+<% else %>
+  <h1>New Parties!</h1>
+  <%= link_to "Passed Events", root_path(q: "1")%>
+<%end%>
+
+<ul>
+  <%= render partial: 'party', collection: @parties%>
+</ul>

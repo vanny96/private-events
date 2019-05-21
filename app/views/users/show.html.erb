@@ -10,8 +10,6 @@
 
 <h3>Invited to:</h3>
 <ul>
-  <%@user.parties_as_guest.each do |party|%>
-    <li><%= party.name %> - <i><%= party.location%></i></li>
-  <%end%>
+  <%= render partial: 'parties/party', collection: @user.parties_as_guest %>
 </ul>
 

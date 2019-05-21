@@ -9,7 +9,7 @@ class InvitationsController < ApplicationController
       flash[:success] = "#{guest.name} has benn invited!"
       redirect_to Party.find params[:invitation][:party_id]
     else
-      flash[:error] = "Invalid email"
+      flash[:error] = "Impossible to invite"
       redirect_to Party.find params[:invitation][:party_id]
     end
   end
