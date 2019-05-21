@@ -1,24 +1,8 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Completed the ["Private Events"](https://www.theodinproject.com/lessons/associations) project from the "The Odin Project" course. Here I had to create a site where users could create parties and invite their friend. 
 
-Things you may want to cover:
+To test it out try to Sign Up, or use the default "test@mail.it" account (detail on his credentials in seed.rb).
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## Heroku link:
+https://rocky-eyrie-58239.herokuapp.com/
