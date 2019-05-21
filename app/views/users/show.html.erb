@@ -1,0 +1,17 @@
+<h1><%= @user.name %></h1>
+<%if current_user == @user %>
+  <%= link_to 'Create a new Party', new_party_path %>
+<% end%>
+
+<h2>Parties:</h2>
+<ul>
+  <%= render partial: 'parties/party', collection: @user.parties %>
+</ul>
+
+<h3>Invited to:</h3>
+<ul>
+  <%@user.parties_as_guest.each do |party|%>
+    <li><%= party.name %> - <i><%= party.location%></i></li>
+  <%end%>
+</ul>
+

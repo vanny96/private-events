@@ -1,0 +1,7 @@
+<h1><%= @party.name %></h1>
+<p><%=@party.body%></p>
+<i><%=@party.location%></i>
+
+<%if logged_in?%>
+  <%= render partial: 'invitations/new', locals: {party: @party}%>
+<%end%>

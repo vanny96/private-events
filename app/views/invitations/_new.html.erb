@@ -1,0 +1,15 @@
+<h2>Invite your friends</h2>
+<%= form_for(:invitation, url: invitations_path) do |f|%>
+  <%= f.hidden_field :party_id, value: party.id %>
+
+  <%= f.label :guest_email, value: "Guest email" %><br>
+  <%= f.email_field :guest_email, list: 'emails'%>
+
+  <datalist id="emails">
+    <%User.pluck(:email).each do |email|%>
+    <option><%= email%></option>
+    <%end%>
+  </datalist>
+
+  <%= f.submit "Invite!" %>
+<%end%>

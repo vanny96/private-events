@@ -1,0 +1,21 @@
+<h1>Host a Party!</h1>
+<%= form_for @party do |f|%>
+  <% if @party.errors.any? %>
+    <ul>
+      <% @party.errors.full_messages.each do |message| %>
+        <li><%= message%></li>
+      <%end%>
+    </ul>
+  <%end%>
+
+  <%= f.label :name %><br>
+  <%= f.text_field :name%><br>
+
+  <%= f.label :body %><br>
+  <%= f.text_field :body%><br>
+
+  <%= f.label :location %><br>
+  <%= f.text_field :location%><br>
+
+  <%= f.submit%>
+<%end%>

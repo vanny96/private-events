@@ -10,6 +10,15 @@
   </head>
 
   <body>
+  <header>
+    <%= render partial: 'layouts/header'%>
+  </header>
+
+    <% if flash.any? %>
+      <% flash.each do |type, message| %>
+        <%= message %>
+      <%end%>
+    <%end%>
     <%= yield %>
   </body>
 </html>
